@@ -9,6 +9,9 @@ Source0:	http://download.kde.org/stable/plasma/%(echo %{version} |cut -d. -f1-3)
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildArch:	noarch
+Conflicts:	gnome-breeze < 0.0.2
+Obsoletes:	gnome-breeze < 0.0.2
+Provides:	gnome-breeze = 0.0.2
 
 %description
 This package contains a version of the KDE Breeze theme for GTK applications
