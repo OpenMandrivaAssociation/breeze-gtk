@@ -6,8 +6,8 @@ License:	GPL
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/stable/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
-BuildRequires:	cmake(ECM)
-BuildRequires:	pkgconfig(Qt5Core)
+#BuildRequires:	cmake(ECM)
+#BuildRequires:	pkgconfig(Qt5Core)
 BuildArch:	noarch
 Conflicts:	gnome-breeze < 0.0.2
 Obsoletes:	gnome-breeze < 0.0.2
@@ -22,8 +22,7 @@ and environments, such as GNOME.
 #-----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%apply_patches
+%setup -qn %{name}-5.5.0
 %cmake_kde5
 
 %build
