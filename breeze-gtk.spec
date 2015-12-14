@@ -6,7 +6,7 @@ License:	GPL
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/stable/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
-#BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(ECM)
 #BuildRequires:	pkgconfig(Qt5Core)
 BuildArch:	noarch
 Conflicts:	gnome-breeze < 0.0.2
