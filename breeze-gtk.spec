@@ -36,3 +36,6 @@ and environments, such as GNOME.
 
 %install
 %ninja_install -C build
+
+# (tpg) delete these files
+rm -rf %{buildroot}/usr/{lib,src}/debug
