@@ -1,3 +1,6 @@
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
+
 Summary:	The Breeze theme for GTK+ windows
 Name:		breeze-gtk
 Version:	5.5.0.1
@@ -36,6 +39,3 @@ and environments, such as GNOME.
 
 %install
 %ninja_install -C build
-
-# (tpg) delete these files
-rm -rf %{buildroot}/usr/{lib,src}/debug
