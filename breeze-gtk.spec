@@ -18,6 +18,7 @@ Obsoletes:	gnome-breeze < 0.0.2
 Provides:	gnome-breeze = 0.0.2
 Requires:	gtk+2.0
 Requires:	gtk2-modules
+
 %description
 This package contains a version of the KDE Breeze theme for GTK applications
 and environments, such as GNOME.
@@ -31,7 +32,7 @@ and environments, such as GNOME.
 #-----------------------------------------------------------------------------
 
 %prep
-%setup -qn %{name}-5.5.0
+%setup -q
 %cmake_kde5
 
 %build
