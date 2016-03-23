@@ -25,9 +25,10 @@ and environments, such as GNOME.
 
 %files
 %{_datadir}/themes/Breeze
-%{_datadir}/themes/Breeze-Dark
 %{_libdir}/kconf_update_bin/gtkbreeze5*
 %{_datadir}/kconf_update/gtkbreeze5*.upd
+%{_datadir}/themes/gtk-2.0/*
+%{_datadir}/themes/gtk-3.0/*
 
 #-----------------------------------------------------------------------------
 
