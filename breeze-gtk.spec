@@ -1,5 +1,6 @@
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
 
 Summary:	The Breeze theme for GTK+ windows
 Name:		breeze-gtk
@@ -8,7 +9,7 @@ Release:	1
 License:	GPL
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
-Source0:	http://download.kde.org/stable/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	gtk2-modules
