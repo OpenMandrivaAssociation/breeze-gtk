@@ -15,6 +15,7 @@ BuildRequires:	cmake(Breeze)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python3dist(pycairo)
 BuildRequires:	gtk2-modules
 BuildRequires:	sassc
 Conflicts:	gnome-breeze < 0.0.2
