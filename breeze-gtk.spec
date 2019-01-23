@@ -11,7 +11,10 @@ Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Breeze)
 BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(cairo)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	gtk2-modules
 BuildRequires:	sassc
 Conflicts:	gnome-breeze < 0.0.2
