@@ -3,7 +3,7 @@
 
 Summary:	The Breeze theme for GTK+ windows
 Name:		breeze-gtk
-Version:	5.22.90
+Version:	5.23.0
 Release:	1
 License:	GPL
 Group:		Graphical desktop/KDE
