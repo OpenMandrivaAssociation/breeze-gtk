@@ -9,6 +9,15 @@ License:	GPL
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org
 Source0:	http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
+# FIXME this is a really weird issue: On aarch64, the
+# build fails with a crash in pycairo, but as soon as
+# any sort of debugging is enabled, the problem goes
+# away.
+# This is obviously not the right "fix" - but in the
+# mean time, it does allow the package to be built and
+# if the problem returns, at least we'll get some
+# information about it.
+Patch0:		debug.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Breeze)
 BuildRequires:	pkgconfig(Qt5Core)
@@ -34,11 +43,11 @@ and environments, such as GNOME.
 #-----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%cmake_kde5 -DWITH_GTK3_VERSION=3.20
+%autosetup -p1
+%cmake_kde5
 
 %build
-%ninja -C build
+%ninja_build -C build
 
 %install
 %ninja_install -C build
