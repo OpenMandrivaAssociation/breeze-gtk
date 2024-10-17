@@ -7,7 +7,7 @@ Version:	5.27.11
 Release:	2
 License:	GPL
 Group:		Graphical desktop/KDE
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 Source0:	http://download.kde.org/%{stable}/plasma/%(echo %{version} |cut -d. -f1-3)/%{name}-%{version}.tar.xz
 # FIXME this is a really weird issue: On aarch64, the
 # build fails with a crash in pycairo, but as soon as
